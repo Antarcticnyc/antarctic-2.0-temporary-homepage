@@ -1,0 +1,150 @@
+html, body {
+  width:100%;
+  height:100vh;
+  color:black;
+  margin:0;
+  padding:0;
+}
+
+body {
+  background:#DEDEDE;
+}
+
+/********* fonts *********/
+
+//font families
+@font-face {
+  font-family: 'Circular';
+  src: url('fonts/CircularStd-Bold.eot');
+  src: url('fonts/CircularStd-Bold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/CircularStd-Bold.woff2') format('woff2'),
+    url('fonts/CircularStd-Bold.woff') format('woff'),
+    url('fonts/CircularStd-Bold.ttf') format('truetype'),
+    url('fonts/CircularStd-Bold.svg#CircularStd-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circular';
+  src: url('fonts/CircularStd-Book.eot');
+  src: url('fonts/CircularStd-Book.eot?#iefix') format('embedded-opentype'),
+    url('fonts/CircularStd-Book.woff2') format('woff2'),
+    url('fonts/CircularStd-Book.woff') format('woff'),
+    url('fonts/CircularStd-Book.ttf') format('truetype'),
+    url('fonts/CircularStd-Book.svg#CircularStd-Book') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body, div, h1, h2, h3, h4, h5, h6, p, a, input {
+    font-family: Circular,"Avant Garde",Avantgarde,"Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+}
+
+a {
+  color:black;
+}
+/************/
+
+.desktop {
+  width:100%;
+  height:100%;
+  display: table;
+  overflow: hidden;
+}
+
+.container {
+  width:100%;
+  text-align:center;
+  position:relative;
+  display:table-cell;
+  vertical-align:middle;
+  transition: transform 0.6s ease-in-out;
+}
+
+.container.translated {
+  transform: translateY(-275px);
+}
+
+.scrollable {
+  padding:8vh 0 120px 0;
+}
+
+.antarctic-logo {
+  display:block;
+  margin:auto;
+  -webkit-filter:invert(100%);
+  -moz-filter:invert(100%);
+  filter:invert(100%);
+}
+
+.antarctic-logo.header {
+    width:190px;
+}
+
+.antarctic-logo.footer {
+    width:120px;
+}
+
+.est {
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.tagline {
+  font-size:1.3em;
+  font-weight: bold;
+}
+
+#hellosvg {
+  width:40%;
+  min-width: 330px;
+  display:block;
+  margin:auto;
+  margin-bottom: 5em;
+}
+
+.lower {
+  font-size: .9em;
+  font-weight: bold;
+}
+
+footer {
+  background:#2BFCAE;
+  position: absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  padding-top:1.5em;
+  transform: translateY(90%);
+}
+
+.meantime {
+  font-size: 1.1em;
+}
+
+.slogan {
+  font-size: 0.8em;
+}
+
+.social-media {
+  margin-bottom: 5em;
+}
+.social-media img {
+  width:80px;
+}
+
+.trigger {
+  position: absolute;
+  width:100%;
+  height:20vh;
+  max-height: 80px;
+  // background-color: red;
+  top: -80px;
+  transition: top 600ms linear;
+}
+
+.desktop .translated .trigger {
+  top: 0;
+  z-index:-1;
+}
