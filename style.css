@@ -27,15 +27,15 @@ body {
 
 @font-face {
   font-family: 'Circular';
-  src: url('fonts/CircularStd-Bold.ttf') format('truetype');
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: 'Circular';
-  src: url('fonts/CircularStd-Book.ttf') format('truetype');
+  src: url('fonts/CircularStd-Medium.ttf') format('truetype');
   font-weight: normal;
 }
+
+// @font-face {
+//   font-family: 'Circular';
+//   src: url('fonts/CircularStd-Book.ttf') format('truetype');
+//   font-weight: normal;
+// }
 
 
 // @font-face {
@@ -101,12 +101,12 @@ a {
 
 .est {
   font-size: 0.8em;
-  font-weight: bold;
+  //font-weight: bold;
 }
 
 .tagline {
   font-size:1.3em;
-  font-weight: bold;
+  // font-weight: bold;
 }
 
 #hellosvg {
@@ -119,6 +119,7 @@ a {
 
 .lower {
   font-size: .9em;
+  // font-weight: bold;
 }
 
 footer {
