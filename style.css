@@ -67,7 +67,7 @@ a {
 }
 
 .scrollable {
-  padding:8vh 0 120px 0;
+  padding:5vh 0 120px 0;
 }
 
 .antarctic-logo {
@@ -97,11 +97,11 @@ a {
 }
 
 #hellosvg {
-  width:40%;
+  width:33%;
   min-width: 330px;
   display:block;
   margin:auto;
-  margin-bottom: 5em;
+  margin-bottom: 6vh;
 }
 
 .lower {
