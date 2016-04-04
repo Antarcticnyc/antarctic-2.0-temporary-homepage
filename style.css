@@ -10,44 +10,22 @@ body {
   background:#FFF;
 }
 
-/********* fonts *********/
 
-//font families
-// @font-face {
-//   font-family: 'Circular';
-//   src: url('fonts/CircularStd-Bold.eot');
-//   src: url('fonts/CircularStd-Bold.eot?#iefix') format('embedded-opentype'),
-//     url('fonts/CircularStd-Bold.woff2') format('woff2'),
-//     url('fonts/CircularStd-Bold.woff') format('woff'),
-//     url('fonts/CircularStd-Bold.ttf') format('truetype'),
-//     url('fonts/CircularStd-Bold.svg#CircularStd-Bold') format('svg');
-//   font-weight: bold;
-// }
+/********* fonts *********/
 
 
 @font-face {
   font-family: 'Circular';
-  src: url('fonts/CircularStd-Medium.ttf') format('truetype');
+  src: url('fonts/CircularStd-Medium.eot');
+  src: url('fonts/CircularStd-Medium.eot?#iefix') format('embedded-opentype'),
+    url('fonts/CircularStd-Medium.woff2') format('woff2'),
+    url('fonts/CircularStd-Medium.woff') format('woff'),
+    url('fonts/CircularStd-Medium.ttf') format('truetype'),
+    url('fonts/CircularStd-Medium.svg#CircularStd-Medium') format('svg');
   font-weight: normal;
+  font-style: normal;
 }
 
-// @font-face {
-//   font-family: 'Circular';
-//   src: url('fonts/CircularStd-Book.ttf') format('truetype');
-//   font-weight: normal;
-// }
-
-
-// @font-face {
-//   font-family: 'Circular';
-//   src: url('fonts/CircularStd-Book.eot');
-//   src: url('fonts/CircularStd-Book.eot?#iefix') format('embedded-opentype'),
-//     url('fonts/CircularStd-Book.woff2') format('woff2'),
-//     url('fonts/CircularStd-Book.woff') format('woff'),
-//     url('fonts/CircularStd-Book.ttf') format('truetype'),
-//     url('fonts/CircularStd-Book.svg#CircularStd-Book') format('svg');
-//   font-weight: normal;
-// }
 
 
 html, body, div, h1, h2, h3, h4, h5, h6, p, a, input {
@@ -160,4 +138,155 @@ footer {
 .desktop .translated .trigger {
   top: 0;
   z-index:-1;
+}
+
+
+
+/********* mobile stylesssssss ********/
+
+.mobile {
+  background: #2BFCAE;
+  width:100%;
+  height:100%;
+  position: relative;
+  transition: transform 0.6s ease-in-out;
+  overflow: hidden;
+}
+
+.mobile.translated {
+  transform: translateX(-150px);
+}
+
+.mobile .antarctic-logo {
+  width:50vw;
+  min-width: 250px;
+  //transform: rotate(90deg);
+}
+
+.mobile .top, .mobile .bottom {
+  position:absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  margin:auto;
+  text-align: center;
+}
+
+.mobile .top {
+  top:2vh;
+}
+
+.mobile .bottom {
+  bottom:2vh;
+  transform: rotate(180deg);
+  margin:auto;
+}
+
+.mobile .bottom p , .mobile .top p {
+  font-size:2em;
+  margin:0.2em;
+}
+
+.mobile .left, .mobile .right {
+  position: absolute;
+  width:100vh;
+  text-align: center;
+  z-index: 5;
+}
+
+.mobile .left {
+  left:6vw;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+}
+
+.mobile .right {
+  right: 6vw;
+  top: 50%;
+  transform: translateX(50%) translateY(-50%) rotate(90deg);
+}
+
+.mobile .left p, .mobile .right p {
+  font-size: 1.2em;
+}
+
+.mobile .left p span {
+  margin:1em;
+}
+
+.mobile .right p span {
+  margin: 2em;
+}
+
+.mobile.social {
+  width:150px;
+  height:100%;
+  position: fixed;
+  // top:50%;
+  transform: translateX(100%);
+  right:0;
+  background-color: #2BFCAE;
+  top:0;
+  text-align: center;
+}
+
+.mobile.social.translated {
+  transform: translateX(0);
+}
+
+.mobile.social a {
+  display:block;
+}
+
+.mobile.social img {
+  width:100px;
+}
+
+.hellomob {
+  width:70vw;
+  height:100%;
+  background:url(Images/hello-mobile-vertical.svg) repeat-y top center;
+  background-size:100% auto;
+  // background:url(Images/hello-mobile.svg) 0% 0% repeat;
+  // animation: hellomove-horizontal 7s linear infinite;
+  animation: hellomove-vertical 7s linear infinite;
+  position: relative;
+  margin:auto;
+}
+
+@keyframes hellomove-horizontal {
+  from {
+    /*transform: translateX(0%);    */
+    background-position: 0vh 0%;
+  }
+  to {
+    /* transform: translateX(-221vh);*/
+    // background-position: -154.7vh 0%;
+    background-position: 0% -154.7vh;
+
+  }
+}
+
+
+@keyframes hellomove-vertical {
+  from {
+    background-position: 0vh 0%;
+  }
+  to {
+    background-position: 0% 152vw;
+
+  }
+}
+
+@media  only screen and (max-width:736px) {
+    /* Style Rules */
+  body {
+    background-color: #2BFCAE;
+  }
+  .mobile {
+    display:block;
+  }
+  .desktop {
+    display:none;
+  }
 }

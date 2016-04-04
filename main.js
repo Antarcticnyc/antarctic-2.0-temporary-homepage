@@ -11,4 +11,10 @@ $(document).ready(function(){
 		console.log('left');
 		}
 	);
+
+	$('#social-link').click(function(){
+		event.preventDefault();
+		$('.mobile').toggleClass('translated');
+	});
+
 });
