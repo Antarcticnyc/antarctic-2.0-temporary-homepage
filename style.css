@@ -8,6 +8,7 @@ html, body {
 
 body {
   background:#FFF;
+  -webkit-font-smoothing: antialiased;
 }
 
 
@@ -79,12 +80,10 @@ a {
 
 .est {
   font-size: 0.8em;
-  //font-weight: bold;
 }
 
 .tagline {
   font-size:1.3em;
-  // font-weight: bold;
 }
 
 #hellosvg {
@@ -97,7 +96,6 @@ a {
 
 .lower {
   font-size: .9em;
-  // font-weight: bold;
 }
 
 footer {
@@ -130,7 +128,6 @@ footer {
   width:100%;
   height:20vh;
   max-height: 80px;
-  // background-color: red;
   top: -80px;
   transition: top 600ms linear;
 }
@@ -145,6 +142,7 @@ footer {
 /********* mobile stylesssssss ********/
 
 .mobile {
+  display:none;
   background: #2BFCAE;
   width:100%;
   height:100%;
@@ -159,10 +157,19 @@ footer {
 
 .mobile .antarctic-logo {
   width:50vw;
-  min-width: 250px;
-  //transform: rotate(90deg);
+  min-width: 220px;
 }
 
+.mobile .top, .mobile .bottom, .mobile .left, .mobile .right {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.mobile .top > *, .mobile .bottom > *, .mobile .left > *, .mobile .right > * {
+transform: translate3d(0, 0, 0);
+}
 .mobile .top, .mobile .bottom {
   position:absolute;
   z-index: 2;
@@ -183,7 +190,7 @@ footer {
 }
 
 .mobile .bottom p , .mobile .top p {
-  font-size:2em;
+  font-size:8vw;
   margin:0.2em;
 }
 
@@ -207,7 +214,7 @@ footer {
 }
 
 .mobile .left p, .mobile .right p {
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .mobile .left p span {
@@ -222,12 +229,17 @@ footer {
   width:150px;
   height:100%;
   position: fixed;
-  // top:50%;
   transform: translateX(100%);
   right:0;
   background-color: #2BFCAE;
   top:0;
   text-align: center;
+}
+
+.mobile.social .wrapper {
+  position:relative;
+  top:50%;
+  transform: translateY(-50%);
 }
 
 .mobile.social.translated {
@@ -247,8 +259,6 @@ footer {
   height:100%;
   background:url(Images/hello-mobile-vertical.svg) repeat-y top center;
   background-size:100% auto;
-  // background:url(Images/hello-mobile.svg) 0% 0% repeat;
-  // animation: hellomove-horizontal 7s linear infinite;
   animation: hellomove-vertical 7s linear infinite;
   position: relative;
   margin:auto;
@@ -256,13 +266,10 @@ footer {
 
 @keyframes hellomove-horizontal {
   from {
-    /*transform: translateX(0%);    */
     background-position: 0vh 0%;
   }
   to {
-    /* transform: translateX(-221vh);*/
-    // background-position: -154.7vh 0%;
-    background-position: 0% -154.7vh;
+    background-position: 0% 76vw;
 
   }
 }
@@ -278,15 +285,80 @@ footer {
   }
 }
 
+/********* mobile general rulessssssss **********/
+
 @media  only screen and (max-width:736px) {
     /* Style Rules */
-  body {
+  body, html {
+    overflow: hidden;
     background-color: #2BFCAE;
+    max-height: 100vh;
+    max-width: 100vw;
+    -webkit-text-size-adjust: 100%;
   }
   .mobile {
     display:block;
   }
   .desktop {
     display:none;
+  }
+}
+
+/********* mobile landscape rulessssssss **********/
+
+@media only screen and (max-width:736px) and (orientation:landscape) {
+  .mobile {
+    transform: translateX(-50%) translateY(-50%) rotate(90deg);
+    height: 100vw;
+    width: 100vh;
+    left: 50%;
+    top: 50%;
+  }
+
+  .mobile.translated {
+    transform: translateX(-50%) translateY(-50%) rotate(90deg) translateX(100px);
+  }
+
+  .mobile .antarctic-logo {
+    width: 60vh;
+  }
+
+  .mobile .bottom p, .mobile .top p {
+    font-size: 8vh;
+  }
+
+  .mobile .left, .mobile .right {
+    width:100vw;
+  }
+
+  .mobile .left {
+    left: 7vh;
+  }
+
+  .mobile .right {
+    right: 7vh;
+    transform: translateX(50%) translateY(-50%) rotate(-90deg);
+  }
+
+  .mobile .left p, .mobile .right p {font-size: 1em;}
+
+  .mobile.social {
+    transform: translateY(-100%);
+    width: 100vw;
+    left: 0;
+    height: 100px;
+  }
+
+  .mobile.social a {
+    display:inline-block;
+  }
+
+  .mobile.social img {
+    width:75px;
+  }
+
+  .hellomob {
+    width:35vw;
+    animation: hellomove-horizontal 7s linear infinite;
   }
 }

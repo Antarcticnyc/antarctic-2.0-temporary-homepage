@@ -12,9 +12,21 @@ $(document).ready(function(){
 		}
 	);
 
-	$('#social-link').click(function(){
+	$('.mobile.landing').click(function(){
+		if ($(this).hasClass("expanded")) {
+			$('.mobile').toggleClass('translated');
+			$(this).removeClass("expanded");
+		}
+	});
+
+	$('.mobile #social-link').click(function(){
 		event.preventDefault();
-		$('.mobile').toggleClass('translated');
+		if (!$('.mobile.landing').hasClass("expanded")) {
+			$('.mobile').toggleClass('translated');
+			setTimeout(function(){
+				$('.mobile.landing').addClass('expanded');
+			}, 400);
+		}
 	});
 
 });
