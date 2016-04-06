@@ -8,10 +8,17 @@ $(document).ready(function(){
 		},
 		function(){
 		$('.desktop .container').removeClass('translated');
-		console.log('left');
+		// console.log('left');
 		}
 	);
 
+	//background swapper
+	$('.desktop .overlay > div').hover(function(){
+		//console.log('hovering over' + $(this).attr('class'));
+		$('.inner').attr("fill", "url(#" + $(this).attr('class') + ")");
+	});
+
+	//mobile social menu expand/close
 	$('.mobile.landing').click(function(){
 		if ($(this).hasClass("expanded")) {
 			$('.mobile').toggleClass('translated');

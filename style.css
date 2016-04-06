@@ -35,6 +35,11 @@ html, body, div, h1, h2, h3, h4, h5, h6, p, a, input {
 
 a {
   color:black;
+  text-decoration: none;
+}
+
+a.underline {
+  border-bottom: 1px solid black;
 }
 /************/
 
@@ -52,6 +57,7 @@ a {
   display:table-cell;
   vertical-align:middle;
   transition: transform 0.6s ease-in-out;
+  pointer-events: none;
 }
 
 .container.translated {
@@ -68,10 +74,13 @@ a {
   -webkit-filter:invert(100%);
   -moz-filter:invert(100%);
   filter:invert(100%);
+  pointer-events: all;
 }
 
 .antarctic-logo.header {
     width:190px;
+    position: relative;
+    z-index: 2;
 }
 
 .antarctic-logo.footer {
@@ -96,6 +105,9 @@ a {
 
 .lower {
   font-size: .9em;
+  position: relative;
+  z-index: 2;
+  pointer-events: all;
 }
 
 footer {
@@ -106,6 +118,8 @@ footer {
   bottom:0;
   padding-top:1.5em;
   transform: translateY(90%);
+  z-index: 3;
+  pointer-events: all;
 }
 
 .meantime {
@@ -129,15 +143,40 @@ footer {
   height:20vh;
   max-height: 80px;
   top: -80px;
+  z-index: 3;
   transition: top 600ms linear;
 }
 
 .desktop .translated .trigger {
   top: 0;
-  z-index:-1;
+  z-index:2;
 }
 
+/************ rules for hover and change of bg effect **************/
 
+.desktop .overlay {
+  position:absolute;
+  width:100%;
+  height:100%;
+  /*background:rgba(200,100,125,0.6);*/
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+  flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+}
+
+.desktop .overlay > div {
+  width:calc(100%/12);
+  height:100vh;
+  margin: 0;
+  padding:0;
+}
 
 /********* mobile stylesssssss ********/
 
