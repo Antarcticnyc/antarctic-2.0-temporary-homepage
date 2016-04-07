@@ -17,6 +17,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
 	<script type="text/javascript" src="main.js"></script>
 </head>
 <body>
@@ -74,58 +75,157 @@
 
 	<div class="container">
 			<section class="scrollable">
-				<img class="antarctic-logo header" src="http://dev.antarcti.cc/slider-outreach/imgs/antartic_logo.png" alt="logo" />
+			<div class="topper">
+				<a href="index.html"><img class="antarctic-logo header" src="http://dev.antarcti.cc/slider-outreach/imgs/antartic_logo.png" alt="logo" /></a>
 				<p class="est">est 2012</p>
-				<div class="homepage">				
-					<p class="tagline">Humanity Focused Digital Agency</p>
-					<svg id="hellosvg" viewBox="0,0,585,450" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-						<defs>
-					    <pattern id="one" patternUnits="objectBoundingBox" width="1" height="1">
-					      <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Images/backgrounds/antarctic-hello_1.jpg" x="-300" y="-300" width="1440" height="1027"></image>
-					    </pattern>
-					    <pattern id="two" patternUnits="objectBoundingBox" width="1" height="1">
-					      <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Images/backgrounds/antarctic-hello_2.jpg" x="-150" y="-200" width="1152" height="821"></image>
-					    </pattern>
-					    <pattern id="three" patternUnits="objectBoundingBox" width="1" height="1">
-					      <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Images/backgrounds/antarctic-hello_3.jpg" x="-325" y="-60" width="1152" height="821"></image>
-					    </pattern>
-					    <pattern id="four" patternUnits="objectBoundingBox" width="1" height="1">
-					      <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Images/backgrounds/antarctic-hello_4.jpg" x="-278" y="-200" width="921" height="656"></image>
-					    </pattern>
-					    <pattern id="five" patternUnits="objectBoundingBox" width="1" height="1">
-					      <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Images/backgrounds/antarctic-hello_5.jpg" x="-278" y="-60" width="1440" height="1027"></image>
-					    </pattern>
-					    <pattern id="six" patternUnits="objectBoundingBox" width="1" height="1">
-					      <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Images/backgrounds/antarctic-hello_6.jpg" x="-308" y="-100" width="921" height="656"></image>
-					    </pattern>
-					    <pattern id="seven" patternUnits="objectBoundingBox" width="1" height="1">
-					      <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Images/backgrounds/antarctic-hello_7.jpg" x="-278" y="-60" width="1440" height="1027"></image>
-					    </pattern>
-					    <pattern id="eight" patternUnits="objectBoundingBox" width="1" height="1">
-					      <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Images/backgrounds/antarctic-hello_8.jpg" x="-278" y="-60" width="921" height="656"></image>
-					    </pattern>
-					    <pattern id="nine" patternUnits="objectBoundingBox" width="1" height="1">
-					      <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Images/backgrounds/antarctic-hello_9.jpg" x="-128" y="-60" width="736" height="525"></image>
-					    </pattern>
-					    <pattern id="ten" patternUnits="objectBoundingBox" width="1" height="1">
-					      <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Images/backgrounds/antarctic-hello_10.jpg" x="-278" y="-60" width="921" height="656"></image>
-					    </pattern>
-					    <pattern id="eleven" patternUnits="objectBoundingBox" width="1" height="1">
-					      <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Images/backgrounds/antarctic-hello_11.jpg" x="-88" y="-60" width="736" height="525"></image>
-					    </pattern>
-					    <pattern id="twelve" patternUnits="objectBoundingBox" width="1" height="1">
-					      <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Images/backgrounds/antarctic-hello_12.jpg" x="-58" y="-10" width="686" height="470"></image>
-					    </pattern>
-					  </defs>
-						<path class="inner" fill="url(#one)" d="M521.9,386.6c0,6.4-2.3,9.3-6.4,9.3s-6.4-2.9-6.4-9.3V68.7c0-6.4,2.3-9.9,6.4-9.9s6.4,3.5,6.4,9.9V386.6z
-		 				M579.3,74.5c0-40-18-65.5-59.7-65.5h-8.1c-41.8,0-60.3,24.4-60.3,65.5v307.4c0,41.2,20.9,64.4,60.3,64.4h8.1
-						c37.7,0,59.7-22.6,59.7-64.4V74.5z M352,11.9v431.5H443v-52.8h-34.8l-0.6-378.7L352,11.9L352,11.9z M252.8,11.9v431.5h91.1v-52.8
-						h-34.8l-0.6-378.7L252.8,11.9L252.8,11.9z M148,11.9v431.5h95.7v-52.2h-40V242.7h33.6v-53.4h-33.6V63.5h38.9V11.9H148z M11,443.4
-						h56.8V246.8h11.6v196.6h56.3V11.9H79.4v176.3H67.8V11.9H11V443.4z"/>
-					</svg>
-						<p class="lower bold">NEW SITE COMING SOON</p>
-					<p class="lower">Portfolio upon <a href="mailto:hello@antarcti.cc" class="underline">request</a> <br/> <!-- <a href="#">Senior Leadership</a> --></p>
-				</div> <!-- end of .homepage -->
+			</div>
+					<div class="content">
+						<div class="homepage" >				
+							<p class="tagline">Humanity Focused Digital Agency</p>
+							<svg id="hellosvg" viewBox="0,0,585,450" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+								<defs>
+							    <pattern id="one" patternUnits="objectBoundingBox" width="1" height="1">
+							      <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Images/backgrounds/antarctic-hello_1.jpg" x="-300" y="-300" width="1440" height="1027"></image>
+							    </pattern>
+							    <pattern id="two" patternUnits="objectBoundingBox" width="1" height="1">
+							      <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Images/backgrounds/antarctic-hello_2.jpg" x="-150" y="-200" width="1152" height="821"></image>
+							    </pattern>
+							    <pattern id="three" patternUnits="objectBoundingBox" width="1" height="1">
+							      <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Images/backgrounds/antarctic-hello_3.jpg" x="-325" y="-60" width="1152" height="821"></image>
+							    </pattern>
+							    <pattern id="four" patternUnits="objectBoundingBox" width="1" height="1">
+							      <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Images/backgrounds/antarctic-hello_4.jpg" x="-278" y="-200" width="921" height="656"></image>
+							    </pattern>
+							    <pattern id="five" patternUnits="objectBoundingBox" width="1" height="1">
+							      <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Images/backgrounds/antarctic-hello_5.jpg" x="-278" y="-60" width="1440" height="1027"></image>
+							    </pattern>
+							    <pattern id="six" patternUnits="objectBoundingBox" width="1" height="1">
+							      <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Images/backgrounds/antarctic-hello_6.jpg" x="-308" y="-100" width="921" height="656"></image>
+							    </pattern>
+							    <pattern id="seven" patternUnits="objectBoundingBox" width="1" height="1">
+							      <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Images/backgrounds/antarctic-hello_7.jpg" x="-278" y="-60" width="1440" height="1027"></image>
+							    </pattern>
+							    <pattern id="eight" patternUnits="objectBoundingBox" width="1" height="1">
+							      <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Images/backgrounds/antarctic-hello_8.jpg" x="-278" y="-60" width="921" height="656"></image>
+							    </pattern>
+							    <pattern id="nine" patternUnits="objectBoundingBox" width="1" height="1">
+							      <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Images/backgrounds/antarctic-hello_9.jpg" x="-128" y="-60" width="736" height="525"></image>
+							    </pattern>
+							    <pattern id="ten" patternUnits="objectBoundingBox" width="1" height="1">
+							      <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Images/backgrounds/antarctic-hello_10.jpg" x="-278" y="-60" width="921" height="656"></image>
+							    </pattern>
+							    <pattern id="eleven" patternUnits="objectBoundingBox" width="1" height="1">
+							      <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Images/backgrounds/antarctic-hello_11.jpg" x="-88" y="-60" width="736" height="525"></image>
+							    </pattern>
+							    <pattern id="twelve" patternUnits="objectBoundingBox" width="1" height="1">
+							      <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Images/backgrounds/antarctic-hello_12.jpg" x="-58" y="-10" width="686" height="470"></image>
+							    </pattern>
+							  </defs>
+								<path class="inner" fill="url(#one)" d="M521.9,386.6c0,6.4-2.3,9.3-6.4,9.3s-6.4-2.9-6.4-9.3V68.7c0-6.4,2.3-9.9,6.4-9.9s6.4,3.5,6.4,9.9V386.6z
+				 				M579.3,74.5c0-40-18-65.5-59.7-65.5h-8.1c-41.8,0-60.3,24.4-60.3,65.5v307.4c0,41.2,20.9,64.4,60.3,64.4h8.1
+								c37.7,0,59.7-22.6,59.7-64.4V74.5z M352,11.9v431.5H443v-52.8h-34.8l-0.6-378.7L352,11.9L352,11.9z M252.8,11.9v431.5h91.1v-52.8
+								h-34.8l-0.6-378.7L252.8,11.9L252.8,11.9z M148,11.9v431.5h95.7v-52.2h-40V242.7h33.6v-53.4h-33.6V63.5h38.9V11.9H148z M11,443.4
+								h56.8V246.8h11.6v196.6h56.3V11.9H79.4v176.3H67.8V11.9H11V443.4z"/>
+							</svg>
+								<p class="lower bold">NEW SITE COMING SOON</p>
+							<p class="lower">Portfolio upon <a href="mailto:hello@antarcti.cc" class="underline">request</a> <br/> <a href="#" class="underline leadership-link">Senior Leadership</a></p>
+						</div> <!-- end of .homepage -->
+					<div class="leadership unloaded">
+					 <div class="wrapper">
+					 	<h2 class="tagline">Senior Leadership</h2>
+						<section class="profile-box">
+									<img src="Images/antarctic-team_michael-sq.jpg">
+									<table class="current-text-xs">
+										<tr>
+											<td class="name">
+												<p><span>Michael</span><span>Yuasa</span></p>
+											</td>
+											<td class="role">
+												<p>Executive Creative Director</p>
+											</td>
+										</tr>
+										<tr>
+											<td class="contact">
+												<p><a href="mailto:yuasa@antarcti.cc"><span>yuasa</span><span>@antarcti.cc</span></a></p>
+											</td>
+											<td>
+												<p>As the creative director of Antarctic, Michael develops the vision and oversees execution of all team projects, ensuring that the results are innovative, purpose-driven and focused.</p>
+											</td>
+										</tr>
+									</table>
+								</section>
+
+								<section class="profile-box">
+									<img src="Images/antarctic-team_juan-sq.jpg">
+									<table class="current-text-xs">
+										<tr>
+											<td class="name">
+												<p><span>Juan</span><span>Cortes</span></p>
+											</td>
+											<td class="role">
+												<p>Director of Technology</p>
+											</td>
+										</tr>
+										<tr>
+											<td class="contact">
+												<p><a href="mailto:juan@antarcti.cc"><span>juan</span><span>@antarcti.cc</span></a></p>
+											</td>
+											<td class="bio">
+												<p>Juan Cortes is the technology director at Antarctic. He leads the development team to ensure the technical quality of the projects - from architecture design to execution.</p>
+											</td>
+										</tr>
+									</table>
+								</section>
+
+								<section class="profile-box">
+									<img src="Images/antarctic-team_sine-sq.jpg">
+									<table class="current-text-xs">
+										<tr>
+											<td class="name">
+												<p><span>Sine</span><span>Morris</span></p>
+											</td>
+											<td class="role">
+												<p>Senior Producer</p>
+											</td>
+										</tr>
+										<tr>
+											<td class="contact">
+												<p><a href="mailto:sine@antarcti.cc"><span>sine</span><span>@antarcti.cc</span></a></p>
+											</td>
+											<td class="bio">
+												<p>Sine has worked with creative digital productions all over the world, from Copenhagen to Melbourne, and is dedicated to getting all projects done on time and on budget.</p>
+											</td>
+										</tr>
+									</table>
+								</section>
+
+								<div class="selected-clients">
+									<p>Selected Clients:</p>
+									<div class="column">
+										<p>Ronald McDonald House Charities</p>
+										<p>Compassion International</p>
+										<p>N/A</p>
+										<p>Vitamin Water</p>
+										<p>ØDD</p>
+										<p>Condor</p>
+										<p>Moksha / Modo Yoga</p>
+										<p>OAK NYC</p>
+										<p>Dawn Levy</p>
+									</div>
+									<div class="column">
+										<p>David Suzuki Foundation</p>
+										<p>International Playground</p>
+										<p>New York Never Sleeps</p>
+										<p>Caffe Vita</p>
+										<p>Via Tribunali</p>
+										<p>Massai Wilderness Conservation Trust</p>
+										<p>East of the Missisipi</p>
+										<p>Boris Bidjan Saberi</p>
+									</div>
+								</div>
+					 </div>
+					</div> <!-- end of .leadership -->
+				</div> <!-- end of .content -->
 			</section>
 			  
 		 
@@ -143,10 +243,6 @@
 		   <p class="slogan">We amplify the work of organizations making efforts in the name of humanity.</p>
 		  </footer>
 	</div> <!-- end of .container -->
-
-	<div class="leadership">
-		
-	</div>
 
 
 </div>

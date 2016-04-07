@@ -65,7 +65,11 @@ a.underline {
 }
 
 .scrollable {
-  padding:5vh 0 120px 0;
+  padding:5vh 1em 120px 1em;
+}
+
+.scrollable .content {
+  position:relative;
 }
 
 .antarctic-logo {
@@ -108,6 +112,7 @@ a.underline {
   position: relative;
   z-index: 2;
   pointer-events: all;
+  line-height: 1.6em;
 }
 
 footer {
@@ -177,6 +182,105 @@ footer {
   margin: 0;
   padding:0;
 }
+
+
+/************ leadership stylessssss *************/
+
+.leadership {
+    font-size: 0.8rem;
+    pointer-events: all;
+    display:block;
+    background: white;
+}
+
+.leadership.unloaded {
+  position:absolute;
+  left:0;
+  right: 0;
+  top: 110vh;
+  // transition: top 1s ease-in-out;
+  z-index: 3;
+}
+
+.leadership.loading {
+  top:0;
+}
+
+.leadership .wrapper {
+  display:inline-block;
+}
+
+.leadership h2 {
+  font-weight: normal;
+  margin-bottom: 3em;
+  margin-top:.2em;
+}
+
+.leadership .profile-box {
+  width: 28vw;
+  max-width: 350px;
+  display: inline-block;
+  margin-right:1.5rem;
+}
+
+.leadership .profile-box:last-of-type {
+  margin-right:0;
+}
+
+.leadership .profile-box img {
+  width: 100%;
+  height: auto;
+}
+
+.leadership .profile-box table {
+  text-align: left;
+  color: black;
+}
+
+.leadership .profile-box table tr td {
+  /*border-bottom: 0.8em solid transparent;*/
+}
+
+.leadership .profile-box table tr td:first-of-type {
+  border-right: .5rem solid transparent;
+}
+
+.leadership .profile-box table .name span:first-of-type {
+  display: block;
+}
+
+.leadership .profile-box table .name span:last-of-type {
+  display: block;
+  text-transform: uppercase;
+}
+
+.leadership .profile-box table .role {
+  vertical-align: bottom;
+}
+
+.leadership .profile-box table .contact {
+  vertical-align: top;
+}
+
+.leadership .profile-box table .contact a span:last-of-type {
+  display:block;
+}
+
+.leadership .selected-clients {
+    text-align: left;
+    margin-top: 8rem;
+}
+
+.leadership .selected-clients .column {
+  display:inline-block;
+  vertical-align: top;
+  margin-right:3rem;
+}
+
+.leadership .selected-clients .column p {
+    margin: 0;
+}
+
 
 /********* mobile stylesssssss ********/
 
@@ -319,7 +423,7 @@ transform: translate3d(0, 0, 0);
     background-position: 0vh 0%;
   }
   to {
-    background-position: 0% 152vw;
+    background-position: 0% -152vw;
 
   }
 }
@@ -333,6 +437,7 @@ transform: translate3d(0, 0, 0);
     background-color: #2BFCAE;
     max-height: 100vh;
     max-width: 100vw;
+    width:100%;
     -webkit-text-size-adjust: 100%;
   }
   .mobile {
