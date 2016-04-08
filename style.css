@@ -208,6 +208,7 @@ footer {
 
 .leadership .wrapper {
   display:inline-block;
+  position: relative;
 }
 
 .leadership h2 {

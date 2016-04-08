@@ -21,7 +21,7 @@ $(document).ready(function(){
 
 
 	//transition to show leadership page
-	$('.desktop .leadership-link').click(function(){
+	$('.desktop .leadership-link').click(function(event){
 		event.preventDefault();
 		var newH = $('.scrollable .topper').height() + $('.leadership').height();
 		$('.scrollable').velocity({height: newH}, 600);
@@ -31,22 +31,28 @@ $(document).ready(function(){
 			duration:600,
 			complete: function(){
 				// $(this).css('position','relative');
-				$('.homepage').css('display', 'none');
-				$(this).removeClass('unloaded');
+				// $('.homepage').css('display', 'none');
+				// $(this).removeClass('unloaded');
 			}
 		});
+	});
 
+	$('.leadership .close-arrow').click(function(event){
+		event.preventDefault();
+		$('.scrollable').velocity("reverse", 700);
+		$('.leadership').velocity("reverse",700);
 	});
 
 	//mobile social menu expand/close
-	$('.mobile.landing').click(function(){
+	$('.mobile.landing').click(function(event){
+		event.preventDefault();
 		if ($(this).hasClass("expanded")) {
 			$('.mobile').toggleClass('translated');
 			$(this).removeClass("expanded");
 		}
 	});
 
-	$('.mobile #social-link').click(function(){
+	$('.mobile #social-link').click(function(event){
 		event.preventDefault();
 		if (!$('.mobile.landing').hasClass("expanded")) {
 			$('.mobile').toggleClass('translated');
