@@ -46,6 +46,10 @@ a.underline {
   border-bottom: 1px solid black;
 }
 
+a:hover {
+  color: #33CB9A;
+}
+
 a.clicked {
   color: #FF7E40;
   border-color: #FF7E40;

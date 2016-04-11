@@ -28,7 +28,7 @@ $(document).ready(function(){
 	//transition to show leadership page
 	$('.desktop .leadership-link').click(function(event){
 		event.preventDefault();
-		var newH = $('.scrollable .topper').height() + $('.leadership').height();
+		var newH = $('.scrollable .topper').height() + $('.scrollable .leadership').height();
 		$('.scrollable').velocity({height: newH}, 600);
 		$('.leadership').velocity({
 			top:0
@@ -46,6 +46,7 @@ $(document).ready(function(){
 		event.preventDefault();
 		$('.scrollable').velocity("reverse", 700);
 		$('.leadership').velocity("reverse",700);
+		$('a').removeClass('clicked');
 	});
 
 	//mobile social menu expand/close
