@@ -2,6 +2,11 @@
 // when mouseleaves footer remove the translate (via class?) and remove the z-index modifier for the trigger
 
 $(document).ready(function(){
+	//change color for link on every click
+	$('a').click(function(){
+		$(this).toggleClass('clicked');
+	});
+
 	//footer display
 	$('footer').hover(
 		function(){
@@ -44,22 +49,33 @@ $(document).ready(function(){
 	});
 
 	//mobile social menu expand/close
-	$('.mobile.landing').click(function(event){
-		event.preventDefault();
-		if ($(this).hasClass("expanded")) {
-			$('.mobile').toggleClass('translated');
-			$(this).removeClass("expanded");
+	//expanded class is placed when the expansion animation is done - to avoid instand contraction on touch
+	$('.mobile.landing, .mobile.leadership').click(function(event){
+		if ($('.device').hasClass("expanded")) {
+			$('.device').toggleClass('translated');
+			$('.device').removeClass("expanded");
+			$('#social-link').removeClass("clicked");
 		}
 	});
 
 	$('.mobile #social-link').click(function(event){
 		event.preventDefault();
-		if (!$('.mobile.landing').hasClass("expanded")) {
-			$('.mobile').toggleClass('translated');
+		if (!$('.device').hasClass("expanded")) {
+			$('.device').toggleClass('translated');
 			setTimeout(function(){
-				$('.mobile.landing').addClass('expanded');
+				$('.device').addClass('expanded');
 			}, 400);
 		}
 	});
 
-});
+	$('.mobile .leadership-link').click(function(event){
+		event.preventDefault();
+		if(!$('.mobile.leadership').hasClass("translated")) {
+			$(this).html("go back");
+		} else {
+			$(this).html("Senior Leadership");
+		}
+		$('.mobile.leadership').toggleClass('translated');
+	});
+
+}); //end of document.ready

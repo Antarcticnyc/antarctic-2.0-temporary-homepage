@@ -11,6 +11,9 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.device {
+  display:none;
+}
 
 /********* fonts *********/
 
@@ -36,12 +39,18 @@ html, body, div, h1, h2, h3, h4, h5, h6, p, a, input {
 a {
   color:black;
   text-decoration: none;
+  transition: color 0.5s ease-in-out;
 }
 
 a.underline {
   border-bottom: 1px solid black;
 }
-/************/
+
+a.clicked {
+  color: #FF7E40;
+  border-color: #FF7E40;
+}
+/******* desktop landing page rules *****/
 
 .desktop {
   width:100%;
@@ -282,20 +291,39 @@ footer {
     margin: 0;
 }
 
+/********* mobile general rulessssssss **********/
 
-/********* mobile stylesssssss ********/
+@media  only screen and (max-width:736px) {
+    /* Style Rules */
+  body, html {
+    overflow: hidden;
+    background-color: #2BFCAE;
+    max-height: 100vh;
+    max-width: 100vw;
+    width:100%;
+    -webkit-text-size-adjust: 100%;
+  }
+  .device {
+    display:block;
+  }
+  .desktop {
+    display:none;
+  }
+}
 
-.mobile {
-  display:none;
+
+/********* mobile (portrait) stylesssssss ********/
+
+.device, .mobile {
   background: #2BFCAE;
   width:100%;
   height:100%;
   position: relative;
   transition: transform 0.6s ease-in-out;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
-.mobile.translated {
+.device.translated {
   transform: translateX(-150px);
 }
 
@@ -418,7 +446,6 @@ transform: translate3d(0, 0, 0);
   }
 }
 
-
 @keyframes hellomove-vertical {
   from {
     background-position: 0vh 0%;
@@ -429,30 +456,73 @@ transform: translate3d(0, 0, 0);
   }
 }
 
-/********* mobile general rulessssssss **********/
+/******** mobile portrait leadership rules *********/
 
-@media  only screen and (max-width:736px) {
-    /* Style Rules */
-  body, html {
-    overflow: hidden;
-    background-color: #2BFCAE;
-    max-height: 100vh;
-    max-width: 100vw;
-    width:100%;
-    -webkit-text-size-adjust: 100%;
-  }
-  .mobile {
-    display:block;
-  }
-  .desktop {
-    display:none;
-  }
+.mobile.leadership {
+  top: 0;
+  transform: translateX(-100%);
+  position: absolute;
+  overflow: scroll;
+  padding-top:20vh;
 }
+
+.mobile.leadership.translated {
+  transform: translateX(0);
+}
+
+.mobile.leadership .close-arrow, .mobile.leadership .tagline {
+  display:none;
+}
+
+.mobile.leadership table {
+  width:70%;
+  margin:auto;
+}
+
+.mobile.leadership .profile-box {
+  display:block;
+  width:100%;
+  max-width: initial;
+  margin-bottom:5em;
+}
+
+.mobile.leadership .profile-box tr {
+  width:100%;
+}
+
+.mobile.leadership .profile-box td {
+  display: block;
+}
+
+
+.mobile.leadership .profile-box table .name span {
+  display:inline-block;
+}
+
+.leadership .profile-box table .name span:last-of-type {
+  padding-left: .4em;
+}
+
+.mobile.leadership .profile-box table .name p, .mobile.leadership .profile-box table .role p {
+  margin:0;
+}
+
+.mobile.leadership .profile-box table .contact a span:last-of-type {
+  display: initial;
+}
+
+.mobile.leadership .selected-clients {
+    width: 70%;
+    margin: auto;
+    padding-bottom: 43vh;
+    padding-top: 22vh;
+}
+
 
 /********* mobile landscape rulessssssss **********/
 
 @media only screen and (max-width:736px) and (orientation:landscape) {
-  .mobile {
+  .device {
     transform: translateX(-50%) translateY(-50%) rotate(90deg);
     height: 100vw;
     width: 100vh;
@@ -460,8 +530,8 @@ transform: translate3d(0, 0, 0);
     top: 50%;
   }
 
-  .mobile.translated {
-    transform: translateX(-50%) translateY(-50%) rotate(90deg) translateX(100px);
+  .device.translated {
+    transform: translateX(-50%) translateY(-50%) rotate(90deg) translateX(-100px);
   }
 
   .mobile .antarctic-logo {
@@ -488,10 +558,10 @@ transform: translate3d(0, 0, 0);
   .mobile .left p, .mobile .right p {font-size: 1em;}
 
   .mobile.social {
-    transform: translateY(-100%);
-    width: 100vw;
-    left: 0;
-    height: 100px;
+    // transform: translateY(-100%);
+    width: 100px;
+    // left: 0;
+    height: 100vw;
   }
 
   .mobile.social a {
@@ -500,10 +570,44 @@ transform: translate3d(0, 0, 0);
 
   .mobile.social img {
     width:75px;
+    transform: rotate(-90deg);
   }
 
   .hellomob {
     width:35vw;
     animation: hellomove-horizontal 7s linear infinite;
   }
+
+  /*************mobile leadership landscape rules***************/
+
+  .mobile.leadership.translated {
+    transform: translateX(0) rotate(180deg);
+  }
+
+  .mobile.leadership .profile-box > img {
+    transform: rotate(90deg);
+    margin-top: 16vw;
+  }
+
+  .mobile.leadership .profile-box > table {
+    transform: rotate(90deg);
+    position: relative;
+    top:3em;
+  }
+
+  .mobile.leadership.translated .selected-clients > * {
+    transform: translate3d(0,0,0) rotate(90deg);
+  }
+  
+  .mobile.leadership.translated .selected-clients>p {
+    height:100px;
+    width: 100px;
+  }
+
+  .mobile.leadership.translated .selected-clients .column {
+    margin-right: 0;
+    width:200px;
+    height:200px;
+  }
+
 }
