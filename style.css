@@ -50,6 +50,13 @@ a:hover {
   color: #33CB9A;
 }
 
+@media  only screen and (max-width:736px) {
+    /* mobile hover state (none) */
+  a:hover {
+    color:black;
+  }
+}
+
 a.clicked {
   color: #FF7E40;
   border-color: #FF7E40;
@@ -518,8 +525,8 @@ transform: translate3d(0, 0, 0);
 .mobile.leadership .selected-clients {
     width: 70%;
     margin: auto;
-    padding-bottom: 43vh;
-    padding-top: 22vh;
+    padding-bottom: 55vh;
+    padding-top: 11vh;
 }
 
 

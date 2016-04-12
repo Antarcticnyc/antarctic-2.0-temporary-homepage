@@ -2,6 +2,10 @@
 // when mouseleaves footer remove the translate (via class?) and remove the z-index modifier for the trigger
 
 $(document).ready(function(){
+
+	//copy the leadership section to the mobile site
+	$('.desktop .leadership .wrapper').clone().appendTo('.mobile.leadership');
+
 	//change color for link on every click
 	$('a').click(function(){
 		$(this).toggleClass('clicked');
