@@ -611,8 +611,10 @@ transform: translate3d(0, 0, 0);
   }
   
   .mobile.leadership.translated .selected-clients>p {
-    height:100px;
+    height: 100px;
     width: 100px;
+    position: relative;
+    left: 7em;
   }
 
   .mobile.leadership.translated .selected-clients .column {
