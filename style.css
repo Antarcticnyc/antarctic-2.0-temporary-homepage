@@ -81,7 +81,7 @@ a.clicked {
 }
 
 .container.translated {
-  transform: translateY(-275px);
+  transform: translateY(-298px);
 }
 
 .scrollable {
@@ -109,6 +109,7 @@ a.clicked {
 
 .antarctic-logo.footer {
     width:120px;
+    margin-top: 3em;
 }
 
 .est {
@@ -156,7 +157,7 @@ footer {
 }
 
 .social-media {
-  margin-bottom: 5em;
+  margin-bottom: 2.6em;
 }
 .social-media img {
   width:80px;
@@ -300,6 +301,81 @@ footer {
 
 .leadership .selected-clients .column p {
     margin: 0;
+}
+
+/**********mailchimp signup styles*********/
+form#mc-embedded-subscribe-form {
+  margin:1.5em 0;
+}
+
+#mc_embed_signup {
+  position:relative;
+}
+
+.signup-overlay {
+  position:absolute;
+  width:100%;
+  height: 100%;
+  background-color: white;
+}
+
+.signup-overlay p {
+  margin: 0;
+}
+
+input#mce-EMAIL {
+    margin: 0;
+    border: 3px solid black;
+    /* border-right: 0; */
+    height: 17px;
+    margin-right: 0;
+    text-align: center;
+    background-color: #2BFCAE;
+    line-height: 1.6em;
+    position: relative;
+    z-index: 3;
+}
+
+input#mce-EMAIL::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: black;
+}
+input#mce-EMAIL::-moz-placeholder { /* Firefox 19+ */
+  color: black;
+}
+input#mce-EMAIL:-ms-input-placeholder { /* IE 10+ */
+  color: black;
+}
+
+
+input#mce-EMAIL:focus, button#mc-embedded-subscribe {
+  outline:none;
+}
+
+button#mc-embedded-subscribe {
+    background: #2BFCAE;
+    box-shadow: none;
+    border: 3px solid black;
+    margin-left: 0;
+    font-weight: bold;
+    line-height: 1.3em;
+    border-left: none;
+    margin-left: -4px;
+    z-index: 2;
+    position: relative;
+}
+
+button#mc-embedded-subscribe span {
+  font-weight: bold;
+}
+
+button#mc-embedded-subscribe:hover {
+  cursor: pointer;
+  background:black;
+  color:white;
+}
+
+.mce_inline_error {
+  margin-top:1em!important;
 }
 
 /********* mobile general rulessssssss **********/
